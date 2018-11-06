@@ -7,7 +7,6 @@ public class Change {
 		int changeAmount = input.nextInt();
 		
 		int[] changeReturn = Return(changeAmount);
-		//System.out.println(changeReturn[1]);
 		System.out.println("I was given $." + changeReturn[0] + " in change. I split it up as " + changeReturn[1] +" quarters, " + changeReturn[2] + " dimes, " + changeReturn[3] + " nickles and " + changeReturn[4] + " pennies");
 	}
 		public static int[] Return(int changeAmount) {
