@@ -4,10 +4,11 @@ import java.util.Scanner;
 public class Change {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
+		System.out.print("How much change do you have?(In numbers only)");
 		int changeAmount = input.nextInt();
 		
 		int[] changeReturn = Return(changeAmount);
-		System.out.println("I was given $." + changeReturn[0] + " in change. I split it up as " + changeReturn[1] +" quarters, " + changeReturn[2] + " dimes, " + changeReturn[3] + " nickles and " + changeReturn[4] + " pennies");
+		System.out.println("I was given $." + changeAmount + " in change. I split it up as " + changeReturn[0] +" quarters, " + changeReturn[1] + " dimes, " + changeReturn[2] + " nickles and " + changeReturn[3] + " pennies");
 	}
 		public static int[] Return(int changeAmount) {
 			int change = changeAmount;
@@ -34,11 +35,10 @@ public class Change {
 			}
 		}
 			int[] newArray = new int[5];
-			newArray[0] = changeAmount;
-			newArray[1] = quarterCount;
-			newArray[2] = dimeCount;
-			newArray[3] = nickleCount;
-			newArray[4] = pennyCount;
+			newArray[0] = quarterCount;
+			newArray[1] = dimeCount;
+			newArray[2] = nickleCount;
+			newArray[3] = pennyCount;
 			
 			return newArray;
 	}
